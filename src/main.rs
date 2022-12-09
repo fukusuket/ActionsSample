@@ -6,6 +6,6 @@ fn main() {
         if a == "1" {
             panic!("failed")
         }
-        println!("{}", a)
+        println!("@@@ {}", a)
     }
 }
