@@ -26,7 +26,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
+    - name: Echo input parameter
       run: echo "Hello ${{ github.event.inputs.name }}"
 
     - name: Checkout main
@@ -39,3 +39,6 @@ jobs:
       with:
         repository: Yamato-Security/hayabusa-sample-evtx
         path: hayabusa-sample-evtx
+
+    - name: Check files
+      run: ls -la ./main && ls -la ./hayabusa-sample-evtx
