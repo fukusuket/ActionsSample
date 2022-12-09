@@ -17,9 +17,6 @@ jobs:
         os: ['ubuntu-20.04', 'windows-2019', 'macos-12']
 
     steps:
-    - name: Echo input parameter
-      run: echo "Hello ${{ github.event.inputs.name }}"
-
     - name: Checkout main
       uses: actions/checkout@v3
       with:
