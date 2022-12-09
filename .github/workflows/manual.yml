@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Integration Test
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -28,3 +28,14 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+
+    - name: Checkout main
+      uses: actions/checkout@v3
+      with:
+        path: main
+
+    - name: Checkout hayabusa-sample-evtx repo
+      uses: actions/checkout@v3
+      with:
+        repository: Yamato-Security/hayabusa-sample-evtx
+        path: hayabusa-sample-evtx
