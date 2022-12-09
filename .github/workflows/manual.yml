@@ -35,4 +35,4 @@ jobs:
       run: cd main && cargo run --release -- 2
 
     - name: Run3
-      run: cargo run --release -- 3
+      run: cd main && cargo run --release -- 3
