@@ -32,4 +32,4 @@ jobs:
         path: hayabusa-sample-evtx
 
     - name: Run
-      run: cd main && cargo run --release -- 1
+      run: cd main && cargo run --release -- 2
