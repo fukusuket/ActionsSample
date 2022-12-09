@@ -1,5 +1,13 @@
 name: Integration Test
 
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        default: 'Hello world'
+        required: true
+
 jobs:
   integration-test:
     runs-on: ${{ matrix.os }}
