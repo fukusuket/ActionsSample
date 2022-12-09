@@ -31,5 +31,8 @@ jobs:
         repository: Yamato-Security/hayabusa-sample-evtx
         path: hayabusa-sample-evtx
 
-    - name: Run
+    - name: Run2
       run: cd main && cargo run --release -- 2
+
+    - name: Run3
+      run: cargo run --release -- 3
